@@ -1,0 +1,25 @@
+{; Default valuation to assume for the calculation, you can override it on the command line
+ :valuation-usd 1200
+ :grants [{; A grant with a 12-month cliff period, vesting over 36 months
+           :name "Grant A"
+           :shares 10
+           :granted-at "2016-04"
+           :strike-price-usd 400
+           :vesting-months 36
+           :cliff-months 12
+           :tax-percent 15}
+          {; A grant without cliff, vesting over 8 months
+           :name "Grant B"
+           :shares 20
+           :granted-at "2018-02"
+           :strike-price-usd 610
+           :vesting-months 8
+           :tax-percent 15}
+          {; A grant that vests at once after 12 months
+           :name "Grant C"
+           :shares 15
+           :granted-at "2016-10"
+           :strike-price-usd 550
+           :vesting-months 12
+           :cliff-months 12
+           :tax-percent 15}]}
